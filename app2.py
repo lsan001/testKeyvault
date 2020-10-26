@@ -4,7 +4,7 @@ from azure.identity import DefaultAzureCredential
 #from azure.identity import ManagedIdentityCredential
  
 VAULT_URL = os.environ['VAULT_URL']
-SECRET_NAME = 'test-me'
+SECRET_NAME = os.environ['SECRET_NAME']
  
 # default azure client first tries to auth with service principal credentials using env variables
 # if they are not available it will try to use managed identity
